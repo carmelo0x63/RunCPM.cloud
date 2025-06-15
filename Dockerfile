@@ -1,0 +1,18 @@
+# Base image
+FROM alpine:3.22
+
+# Metadata
+LABEL org.opencontainers.image.authors="carmelo[DOT]califano[AT]gmail[DOT]com"
+LABEL org.opencontainers.image.version="1.0"
+ENV BUILD="x86-64"
+ARG DESTDIR=/app
+
+WORKDIR ${DESTDIR}
+
+# Copy RunCPM
+COPY RunCPM.x86-64 RunCPM 
+COPY A0.ZIP .
+
+RUN unzip A0.ZIP
+
+ENTRYPOINT ["./RunCPM"]
