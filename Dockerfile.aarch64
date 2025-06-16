@@ -15,4 +15,4 @@ COPY A0.ZIP .
 
 RUN unzip A0.ZIP
 
-#ENTRYPOINT ["./RunCPM"]
+ENTRYPOINT ["./RunCPM"]
