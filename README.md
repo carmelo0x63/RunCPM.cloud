@@ -12,9 +12,10 @@ writing an abstraction layer file for it. No modification to the main code modul
 </pre>
 Read the full description on its source: https://github.com/MockbaTheBorg/RunCPM
 
-# Build: <arch> = x86-64|aarch64
-`BUILD="<arch>"; docker buildx build -t <repo>/runcpm:"${BUILD}" -f Dockerfile."${BUILD}" .`
+### Build
+`$ BUILD="<arch>"; docker buildx build -t <your_repo>/runcpm:"${BUILD}" -f Dockerfile."${BUILD}" .`
+**NOTE**: `<arch> = x86-64|aarch64`
 
-# Run
-`docker run -it --rm --name RunCPM <repo>/runcpm:"${BUILD}"`
+### Run
+`$ docker run -it --rm --name RunCPM <your_repo>/runcpm:"${BUILD}"`
 
