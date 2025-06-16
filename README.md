@@ -14,6 +14,8 @@ necessary.
 </pre>
 Read the full description on its source: https://github.com/MockbaTheBorg/RunCPM
 
+**NOTE**: the binaries contained herewith have been compiled directly from the [repository above](https://github.com/MockbaTheBorg/RunCPM) with one slight modification: `LDFLAGS =` has been edited to `LDFLAGS = "-static"`.
+
 ### Build
 `$ BUILD="<arch>"; docker buildx build -t <your_repo>/runcpm:"${BUILD}" -f Dockerfile."${BUILD}" .`
 **NOTE**: `<arch> = x86-64|aarch64`
